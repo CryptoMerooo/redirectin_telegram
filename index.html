@@ -10,11 +10,19 @@
                 "https://t.me/AGD_Sam",
                 "https://t.me/autopodborgruziadavid"
             ];
-            
-            let randomIndex = Math.floor(Math.random() * managers.length);
-            let selectedManager = managers[randomIndex];
 
-            window.location.href = selectedManager;
+            // Получаем параметр `last`, который указывает, кому был последний редирект
+            let urlParams = new URLSearchParams(window.location.search);
+            let lastManager = urlParams.get("last");
+
+            // Определяем следующего менеджера (чередуем)
+            let nextIndex = (lastManager === "0") ? 1 : 0;
+
+            // Формируем новый URL с обновленным `last`
+            let redirectUrl = managers[nextIndex] + "?last=" + nextIndex;
+
+            // Перенаправляем пользователя
+            window.location.href = redirectUrl;
         });
     </script>
 </head>
