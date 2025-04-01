@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Перенаправление...</title>
+  <script>
+    window.onload = function() {
+      var managers = [
+        "tg://resolve?domain=AGD_Sam",
+        "tg://resolve?domain=autopodborgruziadavid"
+      ];
+      var selected = managers[Math.floor(Math.random() * managers.length)];
+      window.location.href = selected;
+    };
+  </script>
+</head>
+<body>
+  <p>Перенаправляем вас в чат с менеджером...</p>
+</body>
+</html>
