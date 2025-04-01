@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Перенаправление...</title>
-  <script>
-    window.onload = function() {
-      var managers = [
-        "tg://resolve?domain=AGD_Sam",
-        "tg://resolve?domain=autopodborgruziadavid"
-      ];
-      var selected = managers[Math.floor(Math.random() * managers.length)];
-      window.location.href = selected;
-    };
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перенаправление...</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let managers = [
+                "https://t.me/manager1",
+                "https://t.me/manager2"
+            ];
+            
+            let randomIndex = Math.floor(Math.random() * managers.length);
+            let selectedManager = managers[randomIndex];
+
+            window.location.href = selectedManager;
+        });
+    </script>
 </head>
 <body>
-  <p>Перенаправляем вас в чат с менеджером...</p>
+    <p>Перенаправляем вас к менеджеру...</p>
 </body>
 </html>
